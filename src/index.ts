@@ -12,15 +12,11 @@ export default {
 		};
 		if (supportedDomains) {
 			const origin = request.headers.get('Origin');
-			console.log('origin', origin);
-			console.log('supportedDomains', supportedDomains);
 			if (origin && supportedDomains.includes(origin)) {
 				corsHeaders['Access-Control-Allow-Origin'] = origin;
-				console.log('I was included');
 			}
 		} else {
-			corsHeaders['Access-Control-Allow-Origin'] = '*';
-			console.log('I was not included, anyone can use me!');
+			corsHeaders['Access-Control-Allow-Origin'] = 'https://dogwithcap.xyz/';
 		}
 
 		if (request.method === 'OPTIONS') {
