@@ -16,7 +16,7 @@ export default {
 				corsHeaders['Access-Control-Allow-Origin'] = origin;
 			}
 		} else {
-			corsHeaders['Access-Control-Allow-Origin'] = 'https://dogwithcap.xyz/';
+			corsHeaders['Access-Control-Allow-Origin'] = 'https://dogwithcap.xyz';
 		}
 
 		if (request.method === 'OPTIONS') {
